@@ -1,0 +1,15 @@
+<form action="" methode='POST'>
+    {%csrf_token%}
+    <input type="text" name='nama'>
+    <button type="submit"> simpan </button>
+</form>
+<table>
+    <thead>
+        {%for d in data%}
+        <tr>
+            <th>{{forloop.counter}}</th>
+            <th>{{d.nama}} </th>
+        </tr>
+        {% endfor %}
+    </thead>
+</table>
