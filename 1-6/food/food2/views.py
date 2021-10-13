@@ -33,9 +33,21 @@ def delete(request, id):
 def update(request, id):
     if request.POST:
         models.Task.objects.filter(pk=id).update(
-            item=request.POST[item],
-            harga=request.POST[harga])
+            item=request.POST['item'],
+            harga=request.POST['harga'])
         return redirect('/')
+
+    data = models.Task.objects.all()  # all untuk mengambil semuanya
+    return render(request, 'edit.html', {  # dalam tanda petik merupakan template
+        'data': data,
+    })
+
+
+def detail(request, id):
+    data = models.Task.objects.filter(pk=id).first()
+    return render(request, 'detail.html', {
+        'data': data  # mengambil value di variable data
+    })
 
 # # Create your views here.
 # def index (req):

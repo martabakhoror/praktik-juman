@@ -15,7 +15,7 @@
     <a type="button" class="btn btn-primary" href="/tambah">tambah data</a>
     <table class="table table-striped">
         <tr>
-            <th scope="col">Item</th>
+            <th scope="col">Makanan</th>
             <th scope="col">Harga</th>
             <th scope="col">Actions</th>
         </tr>
@@ -27,7 +27,7 @@
             <td>{{d.item}}</td>
             <td>{{d.harga}}</td>
             <td>
-                <a class="btn btn-sm btn-success" href="/{{d.id}}">Detail</a>
+                <a class="btn btn-sm btn-success" href="/{{d.id}}/detail">Detail</a>
                 <a class="btn btn-sm btn-warning" href="/{{d.id}}/update">Update</a>
                 <a class="btn btn-sm btn-danger" href="/{{d.id}}/delete">Delete</a>
             </td>
