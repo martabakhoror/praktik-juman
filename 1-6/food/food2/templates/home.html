@@ -12,11 +12,18 @@
 </head>
 
 <body>
-    <a type="button" class="btn btn-primary" href="/tambah">tambah data</a>
+    <br>
+    </br>
+    <a type="button" class="btn btn-primary" href="/tambah">Tambah Pesanan</a>
     <table class="table table-striped">
+        <br>
+        </br>
         <tr>
             <th scope="col">Makanan</th>
-            <th scope="col">Harga</th>
+            <th scope="col">Jenis Makanan</th>
+            <th scope="col">Harga Makanan</th>
+            <th scope="col">Minuman</th>
+            <th scope="col">Harga Minuman</th>
             <th scope="col">Actions</th>
         </tr>
         <tr>
@@ -24,8 +31,11 @@
             <!-- forlooping -->
         </tr>
         <tr>
-            <td>{{d.item}}</td>
-            <td>{{d.harga}}</td>
+            <td>{{d.makanan}}</td>
+            <td>{{d.jenismakanan}}</td>
+            <td>{{d.hargamakanan}}</td>
+            <td>{{d.minuman}}</td>
+            <td>{{d.hargaminuman}}</td>
             <td>
                 <a class="btn btn-sm btn-success" href="/{{d.id}}/detail">Detail</a>
                 <a class="btn btn-sm btn-warning" href="/{{d.id}}/update">Update</a>

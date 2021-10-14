@@ -13,10 +13,36 @@
         {% csrf_token %}
         <!-- Tambah Task -->
         <br>
-        <input type="text" name="item" class="form-control">item
+        <input type="text" name="makanan" class="form-control"> Makanan
         <br>
         <br>
-        <input type="number" name="harga" class="form-control" />harga
+
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="jenis">
+            <option selected>Pilih jenis Makanan</option>
+            <option value="Basah">Basah</option>
+            <option value="Kering">Kering</option>
+        </select>
+
+        <br>
+        <input type="text" name="hargamakanan" class="form-control">Harga Makanan
+        <br>
+        <br>
+        <input type="text" name="minuman" class="form-control">Minuman
+        <br>
+        <br>
+        <input type="text" name="hargaminuman" class="form-control" />Harga Minuman
+        <br>
+        <br>
+        <!-- <button type="submit" class="btn btn-primary mt-1">Tambah</button> -->
+        <!-- </form> -->
+        <!-- <br> -->
+        <!-- </br> -->
+        <!-- <form action="" method="POST"> -->
+        <!-- {% csrf_token %} -->
+        <!-- Tambah Task -->
+
+        <br>
+        <!-- <input type="number" name="harga" class="form-control" />harga -->
         <br>
         <br>
         <button type="submit" class="btn btn-primary mt-1">Tambah</button>

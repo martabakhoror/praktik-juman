@@ -12,11 +12,17 @@ def home(request):
 
 def tambah(request):
     if request.POST:  # fungsi post itu untuk menambahkan data
+        # hargamakanan = int(request.POST['hargamakanan'])
         models.Task.objects.create(
-            item=request.POST['item'],
+            makanan=request.POST['makanan'],
+            jenismakanan=request.POST['jenis'],
+            hargamakanan=request.POST['hargamakanan'],
+            minuman=request.POST['minuman'],
             # list data yang akan di tambahkan. harga pertana kembali ke models,harga yang ke dua kembali ke template
-            harga=request.POST['harga']
+            hargaminuman=request.POST['hargaminuman']
         )
+        x = request.POST['jenis']
+        print(x)
         return redirect('/')
   # ketika berhasil nanti kembali ke fungsi itu
     data = models.Task.objects.all()  # all untuk mengambil semuanya
@@ -33,8 +39,10 @@ def delete(request, id):
 def update(request, id):
     if request.POST:
         models.Task.objects.filter(pk=id).update(
-            item=request.POST['item'],
-            harga=request.POST['harga'])
+            makanan=request.POST['makanan'],
+            hargamakanan=request.POST['hargamakanan'],
+            minuman=request.POST['minuman'],
+            hargaminuman=request.POST['hargaminuman'])
         return redirect('/')
 
     data = models.Task.objects.all()  # all untuk mengambil semuanya
